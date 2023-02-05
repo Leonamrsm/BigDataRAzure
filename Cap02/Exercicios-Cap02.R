@@ -41,6 +41,7 @@ View(iris)
 iris
 dim(iris)
 summary(iris)
+str(iris)
 
 # Exercício 7 - Crie um plot simples usando as duas primeiras colunas do dataframe iris
 ?plot
@@ -65,7 +66,8 @@ tracemem(copy_data)==tracemem(iris)
 
 ?slice
 # select rows by range
-sliced_data<- copy_data %>% slice(50:64)
+library("dplyr")
+sliced_data<- slice(copy_data, 50:64)
 sliced_data
 dim(sliced_data)
 
